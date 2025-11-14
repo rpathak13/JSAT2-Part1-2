@@ -39,4 +39,4 @@ function sequentialSearch(array, value) {
   return -1;
 }
 //console.log(sequentialSearch(arr, 20));
- console.log(sequentialSearch(arr, 300))
+console.log(sequentialSearch(arr, 300));

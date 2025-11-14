@@ -40,3 +40,32 @@ function sequentialSearch(array, value) {
 }
 //console.log(sequentialSearch(arr, 20));
 console.log(sequentialSearch(arr, 300));
+
+//creating binarySearch function
+function binarySearch(array, value) {
+  console.log("Binary searching for:", value);
+
+  let low = 0;
+  let high = array.length - 1;
+
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+
+    if (array[mid] === value) {
+      console.log("Found", value, "at index", mid);
+      return mid;
+    }
+    else if (array[mid] < value) {
+      low = mid + 1;  
+    }
+    else {
+      high = mid - 1; 
+    }
+  }
+
+  console.log(value, "was not found in the array");
+  return -1; 
+}
+
+console.log(binarySearch(arr, 23));
+console.log(binarySearch(arr, 200));
